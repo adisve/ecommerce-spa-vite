@@ -1,0 +1,79 @@
+.hero {
+
+  // Icon for toggling hero header in/out of view
+  .toggle-icon {
+    color: var(--on-background-color);
+  }
+
+  .hr-overlay {
+    margin-top: 35px;
+    position: relative;
+  }
+  
+  // Related to chevron, so it centers over the <hr> element
+  .overlay-content {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FEFEFE;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+
+  // Main container for header
+  .hero-header {
+    height: auto;
+    padding-top: 60px;
+    padding-left: 125px;
+    padding-bottom: 50px;
+    transition: padding-left ease .5s;
+
+    @media only screen and (max-width: 991px) {
+      padding-left: 20px;
+    }
+    // Any h1 text inside hero header
+    h1 {
+      font-family: var(--font-family-brand);
+      font-size: 80px;
+      width: 425px;
+      transition: all ease .5s;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 70px;
+      }
+
+      @media only screen and (max-width: 454px) {
+        font-size: 60px;
+      }
+
+    }
+
+    p {
+      transition: all ease .5s;
+      @media only screen and (max-width: 454px) {
+        font-size: 17px;
+      }
+    }
+
+    .header-text-box {
+      width: 370px;
+    }
+
+    #header-question {
+      font-weight: 500;
+    }
+  }
+
+  // Any dividers <hr> inside of hero
+  hr {
+    color: var(--on-background-color);
+    margin-top: 50px;
+    margin-left: 180px;
+    margin-right: 180px;
+    height: 30px;
+  }
+
+}

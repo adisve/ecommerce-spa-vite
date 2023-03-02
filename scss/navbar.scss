@@ -1,0 +1,134 @@
+nav {
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: var(--on-background-color);
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #171717;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  hr {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: -5px;
+    transition: ease all .5s;
+
+    @media only screen and (max-width: 991px) {
+      margin-top: -5px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  .navbar {
+    padding: 10px !important;
+  
+    // Container holding any nav items
+    .navbar-nav {
+      padding-top: 5px !important;
+    }
+  
+    #nav-1 {
+      padding-top: 30px;
+    }
+
+    #nav-2 {
+      margin-left: 15px;
+      #cart {
+        cursor: pointer;
+      }
+      #badge-count {
+        font-size: 12px;
+      }
+    }
+  
+    // Brand logo for website
+    .navbar-brand {
+      color: var(--on-background-color);
+      font-size: 40px;
+      margin-left: 100px;
+      font-family: var(--font-family-brand);
+      transition: ease all .5s;
+  
+      @media only screen and (max-width: 991px) {
+        margin-left: 10px;
+      }
+    }
+  
+    // Hamburger menu
+    .navbar-toggler {
+      color: var(--on-background-color);
+      border: none;
+      margin-right: 5px;
+      &:focus,
+      &:active,
+      &:focus {
+          outline: none;
+          box-shadow: none;
+      }
+    }
+  
+    // Navigation items in the navbar
+    .nav-item {
+      text-align: right;
+      a {
+        text-decoration: none;
+        font-family: var(--font-family);
+        color: var(--on-background-color);
+        font-size: 20px;
+        cursor: pointer;
+        
+        @media only screen and (max-width: 991px) {
+          margin-right: 0px;
+          padding: 10px;
+          padding-right: 20px;
+          font-size: 30px;
+        }
+      }
+
+      
+    }
+  
+    // cart icon opening user purchases
+    .cart-icon {
+      background-color: var(--on-background-color);
+      transition: color 300ms;
+      margin-right: 30px;
+      font-size: 22px;
+      margin-top: 3px;
+      cursor: pointer;
+
+      @media only screen and (max-width: 991px) {
+        margin-left: 0px;
+      }
+    }
+  
+    // Counter overlapping cart icon
+    .fa-layers-counter {
+      z-index: 1;
+      background-color: var(--primary-color);
+      margin-right: -12px;
+      margin-top: -10px;
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+}

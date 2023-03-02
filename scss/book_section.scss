@@ -1,0 +1,128 @@
+#filter-sorting {
+
+  margin-bottom: 70px;
+
+  #filter-dropdown {
+    cursor: pointer;
+    margin-left: 65px;
+    width: 650px;
+    transition: all ease .2s;
+
+    @media only screen and (max-width: 992px) {
+      width: 400px;
+    }
+
+    @media only screen and (max-width: 614px) {
+      width: 300px;
+    }
+
+    @media only screen and (max-width: 550px) {
+      width: 250px;
+      margin-left: 40px;
+    }
+
+  }
+  
+  #category-dropdown {
+    cursor: pointer;
+    margin-left: 105px;
+    transition: margin-left ease .5s;
+
+    @media only screen and (max-width: 991px) {
+      margin-left: 20px;
+    }
+
+  }
+}
+
+#book-list {
+  min-height: 400px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.col {
+  height: 200px;
+}
+
+// Button to add item to cart
+.btn {
+  background-color: var(--primary-color) !important;
+  color: var(--on-background-color) !important;
+  transform: scale(0.95);
+  transition: .5s;
+  border: 20px;
+
+  &:hover {
+    transform: scale(1.0);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  i {
+    color: #FEFEFE;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 0px;
+    padding-left: 7px;
+    color: #FEFEFE;
+  }
+}
+
+.badge {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transform: rotate(-15deg) scale(1.2);
+  font-weight: 400;
+
+  p {
+    padding: 0px;
+    margin: 0px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+.author {
+  font-size: 16px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title {
+  font-size: 20.5px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// height: '200px', borderRadius: '5px', marginRight: '35px'
+.book-image {
+  height: 200px;
+  width: 150px;
+  border-radius: 5px;
+  margin-right: 25px;
+}
+
+// marginTop: '35px', marginLeft: '10px'
+.info-icon {
+  margin-top: 34px;
+  margin-left: 15px;
+  font-size: 20px;
+  background-color: #FEFEFE;
+  color: var(--primary-color);
+  border-radius: 50%;
+  cursor: pointer;
+}

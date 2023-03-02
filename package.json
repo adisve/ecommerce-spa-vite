@@ -1,14 +1,20 @@
 {
-  "name": "ecommerce-spa",
+  "name": "ecommerce-bookshop",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "vite",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node post-build.cjs",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "font-awesome": "^4.7.0",
+    "sass": "^1.58.0",
     "vite": "^4.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
   }
 }

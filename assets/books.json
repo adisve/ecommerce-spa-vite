@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "title": "Responsive Design With Bootstrap",
+    "author": "Dylan Miles",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "UX",
+    "price": 13
+  },
+  {
+    "id": 2,
+    "title": "The Joy of UX",
+    "author": "David Platt",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "UX",
+    "price": 15
+  },
+  {
+    "id": 3,
+    "title": "UX and UI",
+    "author": "Lisa Charles",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "UX",
+    "price": 23
+  },
+  {
+    "id": 4,
+    "title": "UX For Dummies",
+    "author": "Kevin P. Nichols, Donald Chesnut",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "UX",
+    "price": 33
+  },
+  {
+    "id": 5,
+    "title": "The UX Book: Agile UX Design for a Quality User Experience",
+    "author": "Rex Hartson, Pardha S. Pyla",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "UX",
+    "price": 53
+  },
+  {
+    "id": 6,
+    "title": "HTML - An Introduction",
+    "author": "Rob Larsen",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "HTML",
+    "price": 34
+  },
+  {
+    "id": 7,
+    "title": "Beginning Web Programming with HTML, XHTML, and CSS",
+    "author": "Jon Duckett",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "HTML",
+    "price": 13
+  },
+  {
+    "id": 8,
+    "title": "Basic HTML Teacher Resources",
+    "author": "K. Hayhow",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "HTML",
+    "price": 45
+  },
+  {
+    "id": 9,
+    "title": "Mastering HTML and XHTML",
+    "author": "Deborah S. Ray, Eric J. Ray",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "HTML",
+    "price": 65
+  },
+  {
+    "id": 10,
+    "title": "HTML and XHTML Pocket Reference",
+    "author": "Jennifer Niederst Robbins",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "HTML",
+    "price": 40
+  },
+  {
+    "id": 11,
+    "title": "Coding with JavaScript For Dummies",
+    "author": "Chris Minnick, Eva Holland",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "JS",
+    "price": 25
+  },
+  {
+    "id": 12,
+    "title": "JavaScript for Kids: A Playful Introduction to Programming",
+    "author": "Nick Morgan",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "JS",
+    "price": 35
+  },
+  {
+    "id": 13,
+    "title": "Eloquent JavaScript, 3rd Edition: A Modern Introduction to Programming",
+    "author": "Marjin Haverbeke",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "JS",
+    "price": 75
+  },
+  {
+    "id": 14,
+    "title": "JavaScript - An Introduction",
+    "author": "David Flanagan",
+    "description": "JavaScript is a scripting language which allows for websites to include client-side and server-side logic, handling network requests, and making the websites more responsive. JavaScript is an interpreted language.",
+    "category": "JS",
+    "price": 60
+  },
+  {
+    "id": 15,
+    "title": "Professional JavaScript for Web Developers",
+    "author": "Matt Frisbie",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "JS",
+    "price": 50
+  },
+  {
+    "id": 16,
+    "title": "CSS Secrets: Better Solutions to Everyday Web Design Problems",
+    "author": "Lea Verou",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "CSS",
+    "price": 34
+  },
+  {
+    "id": 17,
+    "title": "CSS - An Introduction",
+    "author": "Jamie Chan",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "CSS",
+    "price": 23
+  },
+  {
+    "id": 18,
+    "title": "Learn to Code HTML and CSS: Develop and Style Websites",
+    "author": "Shay Howe",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "CSS",
+    "price": 70
+  },
+  {
+    "id": 19,
+    "title": "CSS Mastery",
+    "author": "Andy Budd, Emil Björklund",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "CSS",
+    "price": 30
+  },
+  {
+    "id": 20,
+    "title": "CSS: The Missing Manual",
+    "author": "David Sawyer McFarland",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque beatae a dolore cupiditate vitae enim, ipsa voluptas eligendi qui nisi tempore recusandae quam totam autem? Provident ipsa omnis quod dolor eius est vel id explicabo tempora quasi, voluptate unde.",
+    "category": "CSS",
+    "price": 15
+  }
+]
