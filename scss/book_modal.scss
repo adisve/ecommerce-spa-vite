@@ -1,0 +1,35 @@
+#book-modal {
+  font-family: var(--font-family-base);
+
+  #modal-book-title {
+    font-size: 25px;
+  }
+
+  .btn {
+    border-radius: 10px;
+  }
+
+  #modal-book-price {
+    font-size: 25px;
+    background-color: var(--accent-color);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+
+  #modal-book-category {
+    font-size: 12.5px;
+    background-color: var(--accent-color);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+
+  .modal-title {
+    font-size: 30px;
+  }
+
+  .modal-content {
+    background-color: var(--background-color);
+  }
+}

@@ -2,6 +2,8 @@
 @import 'navbar.scss';
 @import 'hero.scss';
 @import 'book_section.scss';
+@import 'book_modal.scss';
+@import 'offcanvas.scss';
 
 :root {
   --font-family: 'Fredoka', sans-serif;
@@ -9,6 +11,7 @@
   --background-color: #{$background};
   --on-background: #{$onBackground};
   --primary-color: #{$primary};
+  --accent-color: #{$accent};
 
   line-height: 1.5;
 

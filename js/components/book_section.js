@@ -3,7 +3,7 @@ import { createBooksFromJSON, sortBooks, filterBooks } from '../utils/book_utils
 import booksJSON from '../../assets/books.json';
 import { store } from "../store/store";
 const books = createBooksFromJSON(booksJSON);
-
+import { Modal } from 'bootstrap';
 
 export function renderBookSection () {
   return `
@@ -79,8 +79,12 @@ export function renderBooksList(state) {
                       <p class="fw-light title">${book.title}</p>
                       <p class="fst-italic fw-light author" style="overflow: hidden; text-overflow: ellipsis;">${book.author}</p>
                     </div>
-                    <div class="d-flex">
-                      <button class="d-flex mt-4 btn"><i class="fas fa-shopping-cart mr-2" style="padding-top: 4px; padding-right: 10px;"></i><p>Add to cart</p></button>
+                    <div class="d-flex align-items-center">
+                      <button class="d-flex mt-4 btn">
+                        <i class="fas fa-shopping-cart mr-2" style="padding-top: 4px; padding-right: 10px;"></i>
+                        <p>Add to cart</p>
+                      </button>
+                      <i class="info-btn fas fa-info-circle fa-lg mt-4 ms-3"></i>
                     </div>
                   </div>
                 </div>
@@ -88,18 +92,41 @@ export function renderBooksList(state) {
           )
           .join('')
       : `<h1>No books matching your description</h1>`;
-    attachButtonListeners()
+    attachCartButtonListeners();
+    attachInfoButtonListeners();
 }
 
-function attachButtonListeners() {
-  document.querySelectorAll('.btn').forEach((btn) => {
+function attachCartButtonListeners () {
+  document.querySelector('#book-list').querySelectorAll('.btn').forEach((btn) => {
     btn.addEventListener('click', (event) => {
-      const bookElement = event.target.closest('[data-book]');
-      if (bookElement) {
-        const bookData = JSON.parse(bookElement.dataset.book);
-        console.log(bookData);
+      const book = event.target.closest('[data-book]');
+      if (book) {
+        const bookData = JSON.parse(book.dataset.book);
         const state = store.getState();
         store.setState({ shoppingCart: [...state.shoppingCart, bookData] });
+      }
+    });
+  });
+}
+
+function attachInfoButtonListeners() {
+  const infoBtns = document.querySelectorAll('.info-btn');
+  infoBtns.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      const book = event.target.closest('[data-book]');
+      if (book) {
+        const bookData = JSON.parse(book.dataset.book);
+        const modal = new Modal(document.querySelector('#book-modal'));
+        // Set data-book attribute value to book data JSON string
+        modal._element.setAttribute('data-book', JSON.stringify(bookData));
+        modal.show();
+        // Update modal content with book details
+        document.querySelector('#modal-book-title').innerText = bookData.title;
+        document.querySelector('#modal-book-author').innerText = `by ${bookData.author}`;
+        document.querySelector('#modal-book-image').src = `assets/book_covers/${bookData.image}`;
+        document.querySelector('#modal-book-price').innerText = `$ ${bookData.price}`;
+        document.querySelector('#modal-book-description').innerText = bookData.description;
+        document.querySelector('#modal-book-category').innerText = `#${bookData.category}`;
       }
     });
   });

@@ -1,16 +1,17 @@
 import '../scss/style.scss'
-import 'bootstrap/dist/js/bootstrap.bundle';
-import { renderNavBar } from './components/navbar';
+import { renderBadgeCount, renderNavBar } from './components/navbar';
 import { renderHeader } from './components/header';
-import { renderBookSection, renderBooksList } from './components/bookSection';
+import { renderBookSection, renderBooksList } from './components/book_section';
 import { store } from './store/store';
 import { FilterType } from './utils/enums';
-import { renderOffcanvasBody } from './components/offcanvas';
+import { renderOffcanvasBody } from './components/offcanvas_body';
+import { renderBookModal } from './components/book_modal';
 
 document.querySelector('#app').innerHTML = `
   ${ renderNavBar() }
   ${ renderHeader() }
   ${ renderBookSection() }
+  ${ renderBookModal() }
 `
 
 /* Render sections with initial state */
@@ -18,7 +19,22 @@ renderBooksList(store.getState());
 renderOffcanvasBody(store.getState());
 
 /**
- * Event listener for onclick of list items in the category dropdown
+ * Listen for onclick of cart button inside modal
+ */
+document.querySelector('#book-modal').querySelectorAll('.btn').forEach((btn) => {
+  btn.addEventListener('click', (event) => {
+    const book = event.target.closest('[data-book]');
+    if (book) {
+      console.log('Adding')
+      const bookData = JSON.parse(book.dataset.book);
+      const state = store.getState();
+      store.setState({ shoppingCart: [...state.shoppingCart, bookData] });
+    }
+  });
+});
+
+/**
+ * Listen for onclick of list items in the category dropdown
  */
 document.querySelector('#category-dropdown').addEventListener('click', (e) => {
   if (e.target && e.target.matches("li")) {
@@ -28,7 +44,7 @@ document.querySelector('#category-dropdown').addEventListener('click', (e) => {
 });
 
 /**
- * Event listener for onclick of list items in filter dropdown (search)
+ * Listen for onclick of list items in filter dropdown (search)
  */
 document.querySelector('#filter-dropdown').addEventListener('click', (e) => {
   if (e.target && e.target.matches("li")) {
@@ -50,11 +66,6 @@ document.querySelector('#input-group').addEventListener('input', (event) => {
   const searchString = event.target.value;
   store.setState({ filterValue: searchString })
 });
-
-function renderBadgeCount(state) {
-  const badgeCount = state.shoppingCart.length;
-  document.querySelector('#badge-count').textContent = badgeCount;
-}
 
 store.subscribe(renderBadgeCount);
 store.subscribe(renderBooksList);

@@ -1,5 +1,5 @@
 import { Book } from "../models/Book";
-import { CartItem } from "../models/CartItem";
+import { CartItem } from "../models/cart_item";
 import { SortType, FilterType } from "./enums";
 import { stringSimilarity } from "./string_utils";
 import { Images } from "../../assets/images";
@@ -95,7 +95,7 @@ export function convertBooksToCartItems(books) {
       existingCartItem.sum += book.price;
     } else {
       // Otherwise, create a new CartItem
-      const newCartItem = new CartItem(book.title, 1, book.price);
+      const newCartItem = new CartItem(book.title, 1, book.price, book.author, book.id);
       cartItems.push(newCartItem);
     }
   });
