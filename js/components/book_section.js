@@ -124,9 +124,9 @@ function attachInfoButtonListeners() {
         document.querySelector('#modal-book-title').innerText = bookData.title;
         document.querySelector('#modal-book-author').innerText = `by ${bookData.author}`;
         document.querySelector('#modal-book-image').src = `assets/book_covers/${bookData.image}`;
-        document.querySelector('#modal-book-price').innerText = `$ ${bookData.price}`;
+        //document.querySelector('#modal-book-price').innerText = `$ ${bookData.price}`;
         document.querySelector('#modal-book-description').innerText = bookData.description;
-        document.querySelector('#modal-book-category').innerText = `#${bookData.category}`;
+        //document.querySelector('#modal-book-category').innerText = `#${bookData.category}`;
       }
     });
   });

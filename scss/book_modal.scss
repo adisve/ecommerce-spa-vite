@@ -5,16 +5,26 @@
     font-size: 25px;
   }
 
-  .btn {
-    border-radius: 10px;
+  .modal-body {
+    p, h4 {
+      @media only screen and (max-width: 991px) {
+        text-align: center;
+      }
+    }
   }
 
-  #modal-book-price {
-    font-size: 25px;
-    background-color: var(--accent-color);
-    padding: 10px;
+  .btn {
     border-radius: 10px;
-    display: inline-block;
+    color: var(--accent-color) !important;
+    
+    @media only screen and (max-width: 991px) {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 20px;
+    }
   }
 
   #modal-book-category {
@@ -31,5 +41,62 @@
 
   .modal-content {
     background-color: var(--background-color);
+
+    .row.justify-content-end {
+      @media (max-width: 991px) {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+
+    .row.justify-content-end .col-md-6 {
+      @media (max-width: 991px) {
+        width: 100%;
+      }
+    }
+
+    .col-md-6.d-flex {
+      @media (max-width: 767px) {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    hr {
+      transition: 0.5s;
+      @media (max-width: 991px) {
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+      @media (max-width: 767px) {
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .container.d-flex.flex-column {
+      height: 100%;
+
+      @media (max-width: 991px) {
+        align-items: center;
+      }
+    }
+
+    .col-md-6.d-flex {
+      @media (max-width: 767px) {
+        justify-content: center;
+        align-items: center;
+
+        img {
+          max-height: 70vh;
+        }
+      }
+    }
+
+    .row.justify-content-end > .col-md-12 {
+      margin-bottom: auto;
+    }
   }
 }

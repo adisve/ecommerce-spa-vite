@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import liveReload from 'vite-plugin-live-reload';
 
 export default defineConfig({
   css: {
@@ -11,6 +12,8 @@ export default defineConfig({
   },
   server: {
     port: 8080,
-    hot: true
-  }
+  },
+  plugins: [
+    liveReload('./html/**/*.html', { alwaysReload: true })
+  ]
 });

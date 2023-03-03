@@ -1,36 +1,34 @@
 export function renderBookModal () {
   return `
-    <div data-book="" class="modal fade" id="book-modal" tabindex="-1" aria-labelledby="book-modal-label" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-4">
-                <img id="modal-book-image" class="img-fluid rounded" alt="Book Cover">
+  <div class="modal fade" id="book-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body d-flex flex-column">
+          <div class="row flex-grow-1">
+            <div class="col-md-6 d-flex">
+              <img id="modal-book-image" class="img-fluid" alt="Book cover image" style="height: 500px;">
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-between">
+              <div class="container">
+                <div class="row align-items-start">
+                  <div class="col-md-12">
+                    <h4 id="modal-book-title" class="mt-3"></h4>
+                    <hr style="width: 12.5%;">
+                    <p id="modal-book-author"></p>
+                    <p id="modal-book-description" class="text-muted"></p>
+                  </div>
+                </div>
               </div>
-              <div class="col-8">
-                <h5 id="modal-book-title" class="fw-bold"></h5>
-                <p id="modal-book-author"></p>
-                <p id="modal-book-price"></p>
-                <hr>
-                <p id="modal-book-description"></p>
-                <p id="modal-book-category"></p>
+              <div class="mt-auto">
+                <button id="add-to-cart-btn" type="button" class="btn btn-primary w-100"><i class="fa fa-shopping-cart me-2"></i> Add to Cart</button>
+                <button id="close-btn" type="button" class="btn btn-primary w-100 mt-2" data-bs-dismiss="modal"><i class="fa fa-times me-2"></i> Close</button>
               </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button class="d-flex btn">
-              <i class="fas fa-shopping-cart mr-2" style="padding-top: 4px; padding-right: 10px;"></i>
-              <p>Add to cart</p>
-            </button>
-            <button class="d-flex btn" data-bs-dismiss="modal">
-              <i class="fas fa-times mr-2" style="padding-top: 4px; padding-right: 10px;"></i>
-              <p>Close</p>
-            </button>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
   `;
 }
