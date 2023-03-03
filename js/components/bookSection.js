@@ -18,7 +18,7 @@ export function renderBookSection () {
             Object.keys(SortType).map((key) => {
               let sortType = SortType[key];
               return `<li class="dropdown-item" data-sort-type="${sortType}">${sortType}</li>`;
-            })
+            }).join('')
           }</ul>
         </div>
         <div class='d-flex' id='filter-dropdown'>
@@ -29,11 +29,11 @@ export function renderBookSection () {
             <button style="margin-left: 10px;" class="btn d-flex" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fas fa-chevron-down"></i>
             </button>
-            <ul id="filter-dropdown-menu" class="dropdown-menu" style="border-radius: 0px;" aria-labelledby="dropdownMenuButton">${
+            <ul id="filter-dropdown-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">${
               Object.keys(FilterType).map((key) => {
                 let filterType = FilterType[key];
                 return `<li class="dropdown-item" data-filter-type="${filterType}">${filterType}</li>`;
-              })
+              }).join('')
             }</ul>
           </div>
         </div>
@@ -53,8 +53,7 @@ export function renderBookSection () {
  * Render list of books based on filter type and sort type specified
  * in the current store state
  */
-export function renderBooksList() {
-  const state = store.getState();
+export function renderBooksList(state) {
   const filteredSortedBooks = sortBooks(
     filterBooks(
       books,
@@ -81,7 +80,7 @@ export function renderBooksList() {
                       <p class="fst-italic fw-light author" style="overflow: hidden; text-overflow: ellipsis;">${book.author}</p>
                     </div>
                     <div class="d-flex">
-                      <button class="d-flex mt-4 btn"><i class="fas fa-shopping-cart mr-2" style="padding-top: 2px; padding-right: 10px;"></i><p>Add to cart</p></button>
+                      <button class="d-flex mt-4 btn"><i class="fas fa-shopping-cart mr-2" style="padding-top: 4px; padding-right: 10px;"></i><p>Add to cart</p></button>
                     </div>
                   </div>
                 </div>
@@ -89,4 +88,19 @@ export function renderBooksList() {
           )
           .join('')
       : `<h1>No books matching your description</h1>`;
+    attachButtonListeners()
+}
+
+function attachButtonListeners() {
+  document.querySelectorAll('.btn').forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      const bookElement = event.target.closest('[data-book]');
+      if (bookElement) {
+        const bookData = JSON.parse(bookElement.dataset.book);
+        console.log(bookData);
+        const state = store.getState();
+        store.setState({ shoppingCart: [...state.shoppingCart, bookData] });
+      }
+    });
+  });
 }

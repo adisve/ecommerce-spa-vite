@@ -15,7 +15,7 @@ export function renderNavBar () {
             <a class="hover-underline-animation">Creator</a>
           </li>
         </ul>
-        <ul id="nav-2" class="navbar-nav flex-grow-1 justify-content-evenly">
+        <ul id="nav-2" class="navbar-nav flex-grow-1 justify-content-center">
           <li class="nav-item" id="cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart">
             <a class="nav-link">
               <div style="position: relative">

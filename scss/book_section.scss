@@ -53,7 +53,8 @@ p {
   color: var(--on-background-color) !important;
   transform: scale(0.95);
   transition: .5s;
-  border: 20px;
+  border-radius: 5px;
+  margin-left: 5px;
 
   &:hover {
     transform: scale(1.0);
