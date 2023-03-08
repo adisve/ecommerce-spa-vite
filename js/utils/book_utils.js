@@ -1,24 +1,24 @@
 import { Book } from "../models/Book";
 import { CartItem } from "../models/cart_item";
-import { SortType, FilterType } from "./enums";
+import { SortType, FilterSearchType } from "./enums";
 import { stringSimilarity } from "./string_utils";
 import { Images } from "../../assets/images";
 
-export function filterBooks(books, filterType, filterValue, substringLength = 2, caseSensitive = false) {
+export function filterBooksBySearch(books, filterType, filterValue, substringLength = 2, caseSensitive = false) {
   if (!filterValue || filterValue.length < substringLength) {
     return books;
   }
 
   let matchThreshold = 0;
   switch (filterType) {
-    case FilterType.Title:
+    case FilterSearchType.Title:
       matchThreshold = 0.4;
       break;
-    case FilterType.Author:
-    case FilterType.Category:
+    case FilterSearchType.Author:
+    case FilterSearchType.Category:
       matchThreshold = 0.5;
       break;
-    case FilterType.None:
+    case FilterSearchType.None:
       return books;
     default:
       throw new Error('Invalid filter type');
@@ -28,13 +28,13 @@ export function filterBooks(books, filterType, filterValue, substringLength = 2,
   const matchFn = (book) => {
     let fieldValue;
     switch (filterType) {
-      case FilterType.Author:
+      case FilterSearchType.Author:
         fieldValue = book.author;
         break;
-      case FilterType.Category:
+      case FilterSearchType.Category:
         fieldValue = book.category;
         break;
-      case FilterType.Title:
+      case FilterSearchType.Title:
         fieldValue = book.title;
         break;
     }
@@ -103,6 +103,10 @@ export function convertBooksToCartItems(books) {
   return cartItems;
 }
 
+export function filterBooksByPrice(books, minPrice, maxPrice) {
+  console.log(minPrice, maxPrice);
+  return books.filter(book => book.price >= minPrice && book.price <= maxPrice);
+}
 
 export function getTotalPrice(books) {
   const totalPrice = books.reduce((sum, book) => sum + book.price, 0);

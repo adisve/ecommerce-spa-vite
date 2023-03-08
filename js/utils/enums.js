@@ -7,7 +7,7 @@ export const SortType = {
   PriceDescending: 'Price (descending)',
 }
 
-export const FilterType = {
+export const FilterSearchType = {
   Author: 'by Author',
   Category: 'by Category',
   Title: 'by Title', // because why not :)

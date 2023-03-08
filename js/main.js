@@ -3,7 +3,7 @@ import { renderBadgeCount, renderNavBar } from './components/navbar';
 import { renderHeader } from './components/header';
 import { renderBookSection, renderBooksList } from './components/book_section';
 import { store } from './store/store';
-import { FilterType } from './utils/enums';
+import { FilterSearchType } from './utils/enums';
 import { renderOffcanvasBody } from './components/offcanvas_body';
 import { renderBookModal } from './components/book_modal';
 
@@ -48,9 +48,8 @@ document.querySelector('#category-dropdown').addEventListener('click', (e) => {
  */
 document.querySelector('#filter-dropdown').addEventListener('click', (e) => {
   if (e.target && e.target.matches("li")) {
-    console.log('Clicked')
     const filterType = e.target.dataset.filterType;
-    if (filterType === FilterType.None) {
+    if (filterType === FilterSearchType.None) {
       document.querySelector('#input-group').disabled = true;
     } else {
       document.querySelector('#input-group').disabled = false;
@@ -58,6 +57,16 @@ document.querySelector('#filter-dropdown').addEventListener('click', (e) => {
     store.setState({ filterType: filterType });
   }
 });
+
+document.querySelector('#price-range-dropdown').addEventListener('click', (e) => {
+  if (e.target && e.target.matches("li")) {
+    const minPrice = e.target.dataset.minPrice;
+    const maxPrice = e.target.dataset.maxPrice;
+    const priceRange = [minPrice, maxPrice];
+    store.setState({ filterPriceMinMax: priceRange})
+  }
+});
+
 
 /**
  * Event listener for search bar

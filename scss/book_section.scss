@@ -1,7 +1,5 @@
 #filter-sorting {
-
-  margin-bottom: 70px;
-
+  margin-bottom: 30px;
   #filter-dropdown {
     cursor: pointer;
     margin-left: 65px;
@@ -31,8 +29,18 @@
     @media only screen and (max-width: 991px) {
       margin-left: 20px;
     }
-
   }
+}
+
+#price-range-dropdown {
+  cursor: pointer;
+  margin-left: 105px;
+  margin-bottom: 70px;
+  transition: margin-left ease .5s;
+
+    @media only screen and (max-width: 991px) {
+      margin-left: 20px;
+    }
 }
 
 #book-list {

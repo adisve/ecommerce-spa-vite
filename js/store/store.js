@@ -1,11 +1,12 @@
-import { FilterType, SortType } from "../utils/enums";
+import { FilterSearchType, SortType } from "../utils/enums";
 
 class Store {
   #state = {
     shoppingCart: [],
-    filterType: FilterType.None,
-    filterValue: '',
-    sortType: SortType.PriceDescending,
+    filterSearchType: FilterSearchType.None,
+    filterSearchValue: '',
+    sortType: SortType.PriceAscending,
+    filterPriceMinMax: [0, 75]
   };
   
   #subscribers = [];
