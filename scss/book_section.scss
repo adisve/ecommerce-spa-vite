@@ -20,6 +20,10 @@
     }
 
   }
+
+  input, select, textarea{
+    color: var(--background-color);
+  }
   
   #category-dropdown {
     cursor: pointer;
