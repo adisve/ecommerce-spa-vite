@@ -84,22 +84,17 @@ p {
   }
 }
 
-.info-btn {
-  margin-top: 10px;
-  color: var(--primary-color);
-  background-color: #FEFEFE;
-  border-radius: 50%;
+.book-img-container {
+  transition: all .2s;
   cursor: pointer;
-  transition: .5s;
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
-
   &:active {
     transform: scale(0.95);
   }
-
 }
+
 
 .badge {
   position: absolute;

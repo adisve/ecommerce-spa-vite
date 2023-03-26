@@ -84,8 +84,8 @@ export function renderBooksList(state) {
               `<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-4 mb-5" 
                 data-book='${JSON.stringify(book)}'>
                 <div class="d-flex">
-                  <div style="position: relative; margin-right: 10px;">
-                    <img class="shadow book-image" src=${`assets/book_covers/${book.image}`}></img>
+                  <div class="book-img-container" style="position: relative; margin-right: 10px;">
+                    <img draggable="false" class="shadow book-image" src=${`assets/book_covers/${book.image}`}></img>
                     <span class="badge bg-primary rounded-pill position-absolute" style="top: 0; right: 0;">$ ${book.price}</span>
                   </div>
                   <div class="container">
@@ -98,7 +98,6 @@ export function renderBooksList(state) {
                         <i class="fas fa-shopping-cart mr-2" style="padding-top: 4px; padding-right: 10px;"></i>
                         <p>Add to cart</p>
                       </button>
-                      <i class="info-btn fas fa-info-circle fa-lg mt-4 ms-3"></i>
                     </div>
                   </div>
                 </div>
@@ -108,7 +107,7 @@ export function renderBooksList(state) {
       : `<h1>No books matching your description</h1>`;
 
   attachCartButtonListeners();
-  attachInfoButtonListeners();
+  attachImageButtonListeners();
 }
 
 
@@ -125,8 +124,8 @@ function attachCartButtonListeners () {
   });
 }
 
-function attachInfoButtonListeners() {
-  const infoBtns = document.querySelectorAll('.info-btn');
+function attachImageButtonListeners() {
+  const infoBtns = document.querySelectorAll('.book-img-container');
   infoBtns.forEach((btn) => {
     btn.addEventListener('click', (event) => {
       const book = event.target.closest('[data-book]');

@@ -20,8 +20,8 @@ export function renderBookModal () {
                 </div>
               </div>
               <div class="mt-auto">
-                <button id="add-to-cart-btn" type="button" class="btn btn-primary w-100"><i class="fa fa-shopping-cart me-2"></i> Add to Cart</button>
-                <button id="close-btn" type="button" class="btn btn-primary w-100 mt-2" data-bs-dismiss="modal"><i class="fa fa-times me-2"></i> Close</button>
+                <button type="button" class="btn btn-primary w-100"><i class="fa fa-shopping-cart me-2"></i> Add to Cart</button>
+                <button type="button" class="btn btn-primary w-100 mt-2" data-bs-dismiss="modal"><i class="fa fa-times me-2"></i> Close</button>
               </div>
             </div>
           </div>

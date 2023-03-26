@@ -5,6 +5,10 @@
     font-size: 25px;
   }
 
+  .close-btn {
+    background-color: var(--accent-color);
+  }
+
   .modal-body {
     p, h4 {
       @media only screen and (max-width: 991px) {

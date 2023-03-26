@@ -46,19 +46,22 @@ nav {
     }
   
     #nav-1 {
-      padding-top: 30px;
-    }
-
-    #nav-2 {
-      margin-left: 15px;
+      margin-right: 110px;
+      @media only screen and (max-width: 991px) {
+        margin-right: 0px;
+        .fa-shopping-cart {
+          font-size: 25px;
+        }
+      }
       #cart {
         cursor: pointer;
       }
       #badge-count {
+        margin-left:15px;
         font-size: 12px;
       }
     }
-  
+
     // Brand logo for website
     .navbar-brand {
       color: var(--on-background-color);
@@ -74,7 +77,6 @@ nav {
   
     // Hamburger menu
     .navbar-toggler {
-      color: var(--on-background-color);
       border: none;
       margin-right: 5px;
       &:focus,
@@ -82,6 +84,10 @@ nav {
       &:focus {
           outline: none;
           box-shadow: none;
+      }
+      .fa-bars {
+        font-size: 24px;
+        color: #FEFEFE;
       }
     }
   
